@@ -1,7 +1,7 @@
-# SENAITE IT/DEV Manual
+# Setup SENAITE for development
 
-Author: Ramon Bartl
-Version: 1.0.0
+This document describes the steps how to prepare your system for SENAITE
+development.
 
 
 ## SENAITE Dependencies
@@ -10,15 +10,6 @@ SENAITE depends on the following systems:
 
 - Plone 4.x: https://plone.org (currently 4.3.18)
 - Python 2.x: https://www.python.org (currently 2.7.15)
-
-
-## Development environment
-
-The following components need to be setup and configured on your computer in
-order to develop SENAITE:
-
-- Python 2: https://www.python.org
-- Buildout: http://www.buildout.org
 
 
 ### Python
