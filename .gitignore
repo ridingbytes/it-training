@@ -6,3 +6,5 @@ eggs
 develop-eggs
 bin
 src
+ansible/senaite.ansible-playbook
+ansible/.vagrant

@@ -1,0 +1,24 @@
+---
+
+plone_initial_password: "admin"
+munin_admin_user: "admin"
+munin_admin_password: "admin"
+haproxy_stats_user: "admin"
+haproxy_stats_pass: "admin"
+supervisor_http_user: "admin"
+supervisor_http_pass: "admin"
+firewall_open_tcp_ports: [22, 25, 80, 443]
+nginx_keepalive_timeout: "300"
+
+plone_timezone: "Europe/Berlin"
+
+plone_client_count: 2
+
+plone_additional_eggs:
+  - senaite.core
+  - senaite.lims
+  - senaite.impress
+plone_sources:
+  - "senaite.core = git https://github.com/senaite/senaite.core.git"
+  - "senaite.lims = git https://github.com/senaite/senaite.lims.git"
+  - "senaite.impress = git https://github.com/senaite/senaite.impress.git"

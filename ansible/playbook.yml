@@ -1,0 +1,26 @@
+---
+
+- hosts: senaite
+  become: yes
+  become_method: sudo
+  gather_facts: yes
+  pre_tasks:
+    - include: senaite.ansible-playbook/senaite_pre_tasks.yml
+    # Include our onw overwrite variables
+    - name: Include variables defined in `configure.yml`
+      include_vars: configure.yml
+      tags:
+        - always
+
+  tasks:
+    - include: senaite.ansible-playbook/senaite_base.yml
+    - include: senaite.ansible-playbook/senaite_plone.yml
+    - include: senaite.ansible-playbook/senaite_haproxy.yml
+    - include: senaite.ansible-playbook/senaite_varnish.yml
+    - include: senaite.ansible-playbook/senaite_nginx.yml
+    - include: senaite.ansible-playbook/senaite_munin.yml
+    - include: senaite.ansible-playbook/senaite_postfix.yml
+    - include: senaite.ansible-playbook/senaite_security.yml
+
+  handlers:
+    - include: senaite.ansible-playbook/senaite_handlers.yml
