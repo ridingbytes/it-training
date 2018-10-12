@@ -26,5 +26,3 @@ The system can be accessed on http://localhost:8080 as soon as the line
 2018-10-12 00:04:12 INFO Zope Ready to handle requests
 ```
 was shown in the terminal.
-
-
