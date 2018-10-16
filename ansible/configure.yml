@@ -27,6 +27,9 @@ plone_additional_eggs:
   - senaite.impress
   - plone.app.ldap
 
+plone_additional_versions:
+  - Products.LDAPUserFolder=2.27
+
 plone_sources:
   - "senaite.core = git https://github.com/senaite/senaite.core.git"
   - "senaite.lims = git https://github.com/senaite/senaite.lims.git"
