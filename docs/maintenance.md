@@ -15,6 +15,40 @@ sudo supervisorctl stop senaitelims_zeoclient1
 sudo supervisorctl restart senaitelims_zeoclient1
 ```
 
+
+## Add a ZOPE Super User via the terminal
+
+The instance scripts support to add a super-user via the terminal:
+
+```
+root@senaite:~# /home/senaite/senaitelims/bin/client_reserved adduser <username> <password>
+2018-10-16 12:47:31 WARNING plone.behavior Specifying 'for' in behavior 'Related items' if no 'factory' is given has no effect and is superfluous.
+Created user: <username>
+```
+
+This user will be created in the `acl_users` folder in the Zope root, e.g. `http://localhost:8080/acl_users/manage`
+
+
+## Connectint directly to the Database
+
+Zope allows to connect directly to the database using an instance script:
+
+```
+root@senaite:~# /home/senaite/senaitelims/bin/client_reserved debug
+Starting debugger (the name "app" is bound to the top-level Zope object)
+2018-10-16 12:52:21 WARNING plone.behavior Specifying 'for' in behavior 'Related items' if no 'factory' is given has no effect and is superfluous.
+
+>>> portal = app.senaite
+>>> portal.Title()
+'SENAITE'
+>>> portal.setTitle("SENAITE LIMS")
+>>> import transaction
+>>> transaction.commit()
+>>> portal.Title()
+'SENAITE LIMS'
+```
+
+
 ## Backup
 
 The database is located in the `data` folder of the `senaite` user.
