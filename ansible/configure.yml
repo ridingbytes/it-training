@@ -14,6 +14,9 @@ plone_timezone: "Europe/Berlin"
 
 plone_client_count: 2
 
+plone_client1_extras: |
+  ftp-address = 127.0.0.1:2121
+
 # Install additional packages
 additional_system_packages:
   - python-dev
