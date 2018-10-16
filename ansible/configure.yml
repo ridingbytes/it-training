@@ -14,10 +14,19 @@ plone_timezone: "Europe/Berlin"
 
 plone_client_count: 2
 
+# Install additional packages
+additional_system_packages:
+  - python-dev
+  - libldap2-dev
+  - libsasl2-dev
+  - libssl-dev
+
 plone_additional_eggs:
   - senaite.core
   - senaite.lims
   - senaite.impress
+  - plone.app.ldap
+
 plone_sources:
   - "senaite.core = git https://github.com/senaite/senaite.core.git"
   - "senaite.lims = git https://github.com/senaite/senaite.lims.git"
