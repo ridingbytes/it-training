@@ -62,6 +62,19 @@ INFO: rsync -a  --delete /home/senaite/data/senaitelims/blobstoragebackups/blobs
 ```
 
 
+## Connecting to the VM with Port forwarding
+
+Sometimes it is desireable to access an instance directly. However, since the
+instances listen only on the local IP 127.0.0.1, this is not possible.
+
+Here we can leverage the port forwarding capabilities of the `ssh` command.
+
+```
+ssh <SERVER IP> -L <local port>:<server listen addreess>:<server listen port>
+ssh senaite@192.168.101.20 -L 8083:localhost:8083
+```
+
+
 ## Checking for open ports
 
 Use this command to check which ports are open from the outside of your server:
