@@ -23,6 +23,17 @@ The next sections will show some scripts which can be used as a starting point
 to build own scripts.
 
 
+### Hello World
+
+Create a script called `hello` and add the following contents:
+
+```python
+print "Hello! My name is '%s', I live inside '%s' and my current context is '%s'" % (script, container,  repr(context))
+
+return printed
+```
+
+
 ### Export Analysis Requests to CSV
 
 Create a script called `script_ar_to_csv` and add the following contents:
